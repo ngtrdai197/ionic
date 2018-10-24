@@ -1,31 +1,19 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Trang chủ</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-12>
-        <ion-card>
-          <img src="../../assets/imgs/card-sf.png" alt="anh">
-          <div class="card-title">São Paulo</div>
-          <div class="card-subtitle">41 Listings</div>
-        </ion-card>
-      </ion-col>
-      <ion-col col-12>
-        <ion-card>
-          <img src="../../assets/imgs/card-saopaolo.png" alt="anh">
-          <div class="card-title">São Paulo</div>
-          <div class="card-subtitle">41 Listings</div>
-        </ion-card>
-      </ion-col>
-      <ion-col col-12>
-        <ion-card>
-          <img src="../../assets/imgs/card-amsterdam.png" alt="anh">
-          <div class="card-title">Amsterdam</div>
-          <div class="card-subtitle">22 Listings</div>
+      <ion-col col-12 *ngFor="let product of products">
+        <ion-card (click)="goToProductDetail()">
+          <img src="http://localhost:8088{{product.LinkProduct}}" alt="anh">
+          <div class="wrapper">
+            <div class="card-title">{{product.ProductName}}</div>
+            <div class="card-subtitle">Giá: {{product.ProductPrice}} vnđ</div>
+          </div>
         </ion-card>
       </ion-col>
     </ion-row>
