@@ -1,3 +1,11 @@
 page-contact {
-
+    ion-content{
+        ion-list{
+            ion-item{
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }

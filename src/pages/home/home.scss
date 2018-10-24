@@ -1,19 +1,30 @@
 page-home {
-    ion-navbar{
-        justify-content: center;
+    ion-header{
+        display: flex;
+        ion-navbar{
+            justify-content: center;
+            ion-icon{
+                font-size: 2.5em;
+            }
+        }
     }
     ion-content{
-        ion-grid{
-            ion-row{
-                ion-col{
-                    ion-card{
-                        .wrapper {
-                            background: #564e4ead;
-                            text-align: center;
+            ion-grid{
+                ion-row{
+                    ion-col{
+                        ion-card{
+                            .wrapper {
+                                background: #564e4ead;
+                                text-align: center;
+                            }
+                            .card-title {
+                                font-size: 21px;
+                                color: #fff;
+                                background: #333333d4;
+                            }
                         }
                     }
                 }
             }
         }
-    }
 }

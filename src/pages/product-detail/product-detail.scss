@@ -1,3 +1,19 @@
 page-product-detail {
-
+    ion-content{
+        ion-row{
+            ion-col{
+                img{
+                    margin: 10px 0;
+                }
+                .price {
+                    color: #000;
+                    font-size: 21px;
+                    text-align: center;
+                }
+                .description {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
 }

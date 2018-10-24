@@ -1,5 +1,6 @@
 <ion-header>
   <ion-navbar>
+    <ion-icon name="menu"></ion-icon>
     <ion-title>Trang chủ</ion-title>
   </ion-navbar>
 </ion-header>
@@ -7,12 +8,11 @@
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-12 *ngFor="let product of products">
-        <ion-card (click)="goToProductDetail()">
-          <img src="http://localhost:8088{{product.LinkProduct}}" alt="anh">
+      <ion-col col-12 *ngFor="let movie of movies">
+        <ion-card (click)="goToProductDetail(movie)">
+          <img src="{{movie.linkimage}}" alt="anh">
           <div class="wrapper">
-            <div class="card-title">{{product.ProductName}}</div>
-            <div class="card-subtitle">Giá: {{product.ProductPrice}} vnđ</div>
+            <div class="card-title">{{movie.moviename}}</div>
           </div>
         </ion-card>
       </ion-col>
